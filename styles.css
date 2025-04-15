@@ -1,0 +1,944 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+   background-color:  #f8f8f8;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color:white  ;
+    position: relative;
+    height: 50px;
+
+}
+@media (max-width: 768px) {
+    .navbar{
+        flex-wrap:nowrap;
+        overflow-x: hidden;
+        overflow-y: 150%;
+    }
+    
+}
+
+@media (max-width: 768px) {
+      nav a{
+        font-size: 0.2em;
+      }
+}
+
+.nave ul {
+    display: flex;
+    gap: 20px; /* Optionnel : pour espacer les liens */
+    list-style: none; /* Enlève les puces */
+  }
+  
+  .nave ul li a {
+    text-decoration: none;
+    color: black; /* ou une autre couleur */
+    transition: 0.5s;
+    font-size: 15px;
+    
+  }
+  .nave ul li a:hover {
+    background-color: #e9cc29f8;
+    padding: 15px;
+    border-radius: 10px;
+  }
+@media (max-width: 768px){
+  .myLogo{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Shafarik";
+    color: #e9cc29f8;
+  }
+}
+  .myLogo{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Shafarik";
+    color: #e9cc29f8;
+  }
+  svg {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 4%;
+}
+
+
+
+path {
+    stroke: rgb(2, 0, 0); /* Couleur du trait */
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    fill: transparent;
+    stroke-dasharray: 300; /* Longueur totale du chemin */
+    stroke-dashoffset: 300; /* Masque le chemin au début */
+    animation: draw 2s ease-in-out forwards; /* Animation */
+}
+
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0; /* Révèle le chemin */
+    }
+}
+
+@media (max-width: 768px) {
+  svg {
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+}
+/*fin du header navbar*/
+
+/*debut des box*/
+.box {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 colonnes : image gauche + contenu */
+    gap: 20px;
+    align-items: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+  }
+  @media (max-width: 768px) {
+    .box {
+      grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+      padding: 20px;
+    }
+    .image-left img{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .box .box1-right{
+        margin-top: 20px;
+        width: 100%;
+    }
+  }
+  @media(min-width: 1024px) {
+    .les-box {
+      grid-template-columns: 1fr;
+      position : relative;
+    }
+  }
+  @media(max-width: 768px) {
+    .les-box{
+         display: flex;
+         flex-wrap: nowrap;
+         overflow-x: auto;
+         -webkit-overflow-scrolling: touch;
+         padding-bottom: 10px;
+    }
+    .les-box{
+        border: 1px;
+        min-width: 300px;
+        margin: 10px;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: transform 0.5s;
+        flex: 0  0 auto;
+        border-radius: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+      .box1-right h1{
+        font-size: 0.1em;
+      }
+      .box1-right h3{
+        font-size: 0.1rem;
+      }
+      .box1-right p{
+        font-size: 0.1rem;
+      }
+
+  }
+
+  @media (max-width: 768px) and (min-width: 1024px) {
+     .box {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 20px;
+     }
+     .box1-right h1 {
+        font-size: 0.3em;
+     }
+      .box1-right h3 {
+          font-size: 0.2em;
+      }
+      .box1-right p {
+          font-size: 0.1em;
+      }
+      .box1-right img{
+          width: 50px;
+          height: 50px;
+      }
+  }
+  
+  .box1-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  .box1-right h1 {
+    font-family: "Shafarik";
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+  }
+
+  
+  .box1-right p {
+    font-size: 1em;
+    font-family: "Protest Riot", sans-serif;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  .box1-right h3{
+    font-family: "Shafarik";
+    font-size: 1.5em;
+  }
+  .box1-right h3 span{
+    color: #e9cc29f8;
+  }
+  .image-ron {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #e9cc29f8;
+    margin-left: 20px;
+  }
+  
+  .image-left img {
+    width: 370px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+/*fin des box*/
+
+/*debut des les box*/
+  .les-box{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .boxmain1{
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    height: 300px (auto);
+  }
+  .boxmain1 h2{
+    font-family: "shafarik";
+    font-size: 1.5em;
+    color: #e9cc29f8;
+  }
+  .boxmain1 p{
+    font-family: "Protest Riot", sans-serif;
+    font-size: 1em;
+  }
+
+  .boxmain2{
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    height: 300px (auto);
+  }
+  .boxmain2 h2{
+    font-family: "shafarik";
+    font-size: 1.5em;
+    color: #e9cc29f8;
+  }
+  .boxmain2 p{
+    font-family:"Protest Riot", sans-serif;
+    font-size: 1em;
+  }
+
+  .boxmain3{
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    height: 300px (auto);
+    position: relative;
+  }
+  .boxmain3 h2{
+    font-family: "shafarik";
+    font-size: 1.5em;
+    color: #e9cc29f8;
+  }
+    .boxmain3 p{
+        font-family: "Protest Riot", sans-serif;
+        font-size: 1em;
+    }
+
+  .boxmain3 .boxmain-img1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #e9cc29f8;
+  }
+.boxmain3 button{
+    cursor: pointer;
+    background-color: #e9cc29f8;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.boxmain3 a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: none;
+    font-size: 10px;
+    
+}
+
+.boxmain3 button:hover{
+    background-color: #f4f4f4;
+    color: #f4f4f4;
+    border: 2px solid #e9cc29f8;
+}
+
+.boxmain1:hover{
+  transform: translateY(-10px);
+}
+.boxmain1{
+  transition: transform 0.5s;
+}
+.boxmain2:hover{
+  transform: translateY(-10px);
+}
+.boxmain2{
+  transition: transform 0.5s;
+}
+.boxmain3:hover{
+  transform: translateY(-10px);
+}
+.boxmain3{
+  transition: transform 0.5s;
+}
+/*fin des lesbox*/
+/*debut des media*/
+
+.fin-media{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 300px;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    margin: 5px;
+}
+
+    .texte h2{
+        font-family: "shafarik";
+        font-size: 1.5em;
+        color: #e9cc29f8;
+    }
+    .texte p{
+        font-family: "Protest Riot", sans-serif;
+        font-size: 1em;
+    }
+    @media (max-width: 768px) {
+        .texte h2{
+            font-size: 1em;
+        }
+        .texte p{
+            font-size: 0.5em;
+        }
+    }
+    @media (max-width: 768px){
+      .social-container .social-icon {
+        width: 10px;
+        height: 10px;
+        object-fit: cover;
+        margin: 20px ;
+    }
+    }
+
+    
+.social-container .social-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin: 20px ;
+}
+ .social-container .social-icon{
+    padding: 0;
+    margin: 0;
+}
+.social-container a {
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.social-container a{
+    box-shadow: 0 5px 10px rgb (0,0,0,0.05);
+}
+.social-container a::before {
+    content: attr(data-icon);
+    position: absolute;
+    background-color: blue;
+    color : white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgb (0,0,0,0.05);
+    transform: translateY(-40px) rotate(25deg);
+    opacity: 0;
+    transition: 0.5s;
+}
+.social-container a::after {
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px ;
+}
+
+.social-container a:hover::before {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+}
+ 
+footer{
+    padding: 20px;
+    font-family: "shafarik";
+    font-size: 1em;
+    font-weight: bold;
+    color: #e9cc29f8;
+}
+
+/*fin des media*/
+/*aboute me*/
+.social-container1 .social-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin: 20px ;
+}
+@media (max-width: 768px) {
+    .social-container1 .social-icon {
+        width: px;
+        height: 10px;
+        object-fit: cover;
+        margin: 20px ;
+        height: 20px;
+        width: 20px;
+    }
+  }
+
+    .about-me1 .social-container1{
+      background-color: #e9cc29f8;
+      padding: 20px;
+      border-radius: 12px;
+      width: 30px;
+      height: 30px;
+  }
+
+@media (max-width: 768px) {
+      .texteS h1 {
+        font-size: 2em;
+        letter-spacing: 2px;
+        width: 100%;
+      overflow-x: hidden;
+      overflow-y: 100%;
+      }
+}
+
+
+ .social-container1 .social-icon{
+    padding: 0;
+    margin: 0;
+}
+.social-container1 a {
+    background-color: #e9cc29f8;
+    padding: 1em;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.social-container1 a{
+    box-shadow: 0 5px 10px rgb (0,0,0,0.05);
+}
+.social-container1 a::before {
+    content: attr(data-icon);
+    position: absolute;
+    background-color: blue;
+    color : white;
+    text-decoration: none;
+    padding: 0.0.1em 0.0.1em;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgb (0,0,0,0.05);
+    transform: translateY(-40px) rotate(25deg);
+    opacity: 0;
+    transition: 0.5s;
+}
+.social-container1 a::after {
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px ;;
+}
+
+.social-container1 a:hover::before {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+}
+
+.about-me1{
+    display: grid;
+    grid-template-rows: 600px 600px;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    background-color: #f4f4f4;
+    height: 500px;
+}
+@media (max-width: 768px) {
+    .about-me1 {
+      grid-template-columns: 1fr;
+
+    }
+  
+    .about-me1 > div {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+}
+
+.moi img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-me1 .social-container1{
+    background-color: #e9cc29f8;
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    height: 300px;
+}
+
+.svg-image1 svg {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+}
+
+
+path {
+    stroke: rgb(2, 0, 0); /* Couleur du trait */
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    fill: transparent;
+    stroke-dasharray: 300; /* Longueur totale du chemin */
+    stroke-dashoffset: 300; /* Masque le chemin au début */
+    animation: draw 2s ease-in-out forwards; /* Animation */
+}
+
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0; /* Révèle le chemin */
+    }
+}
+
+.texte-abouteme{
+    position: absolute;
+    left: 500px;
+    top: 20%;
+}
+
+.texte-abouteme h2{
+    font-family: "shafarik";
+    font-size: 1.5em;
+    color: #e9cc29f8;
+    font-weight: bold;
+}
+.texte-abouteme p{
+    font-family: "Protest Riot", sans-serif;
+    font-size: 1em; 
+    width: 400px;
+    line-height: 110%; 
+}
+
+@media (max-width: 768px) {
+    .texte-abouteme p{
+        font-size: 0.8em;
+        position: relative;
+        right: 30px;
+        top: 30px;
+    }
+}
+
+/*main layaout*/
+.layaout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  margin: 10px;
+}
+
+.layaout > div {
+  background-color: rgba(224, 191, 4, 0.774);
+  border: 10px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+/*fin du main layaout*/
+/*debut du Texte Scroll*/
+
+.texte-scroll h1{
+    position: relative;
+    letter-spacing: 30px;
+    font-size: 70px;
+    font-family: "Luckiest Guy";
+    font-style: normal;
+    font-weight: 600;
+    color: #e9cc29f8;
+    
+}
+
+
+  .svg-image2 svg {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    top: 10%;
+    left: 45%;
+}
+
+
+path {
+    stroke: rgb(2, 0, 0); /* Couleur du trait */
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    fill: transparent;
+    stroke-dasharray: 300; /* Longueur totale du chemin */
+    stroke-dashoffset: 300; /* Masque le chemin au début */
+    animation: draw 2s ease-in-out forwards; /* Animation */
+}
+
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0; /* Révèle le chemin */
+    }
+}
+
+.Gtexte{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.Gtexte h1{
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    font-family: "Luckiest Guy", cursive;
+    color: #e9cc29f8;
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+    .Gtexte h1{
+        font-size: 30px;
+        letter-spacing: 2px;
+
+    }
+}
+
+.mySkills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .mySkills > div {
+    max-width: 500px;
+    width: 100%;
+    background-color: #e9cc29f8;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Mobile first: stack all in one column */
+  @media (max-width: 768px) {
+    .mySkills {
+      grid-template-columns: 1fr;
+    }
+  
+    .mySkills > div {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .mySkills h2,
+    .mySkills h3,
+    .mySkills p {
+      font-size: 1em;
+    }
+  }
+  
+  /* Tablet: maybe 2 columns */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .mySkills {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .mySkills > div {
+      width: 100%;
+    }
+  }
+  
+  .mySkills h2 {
+    font-family: "shafarik";
+    font-size: 1.5em;
+  }
+  
+  .mySkills h3 {
+    font-family: "shafarik";
+    font-size: 1.3em;
+  }
+  
+  .mySkills p {
+    font-family: "protest Riot", sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  .Tips{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 1000%;
+  }
+
+
+  .social-container2 .social-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin: 20px ;
+}
+ .social-container2 .social-icon{
+    padding: 0;
+    margin: 0;
+}
+.social-container2 a {
+    padding: 1em;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.social-container2 a{
+    box-shadow: 0 5px 10px rgb (0,0,0,0.05);
+}
+.social-container2 a::before {
+    content: attr(data-icon);
+    position: absolute;
+    background-color: blue;
+    color : white;
+    text-decoration: none;
+    padding: 0.0.1em 0.0.1em;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgb (0,0,0,0.05);
+    transform: translateY(-40px) rotate(25deg);
+    opacity: 0;
+    transition: 0.5s;
+}
+.social-container2 a::after {
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px ;;
+}
+
+.social-container2 a:hover::before {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+}
+
+.Tips p{
+    font-family: "Protest Riot", sans-serif;
+    font-size: 1em;
+    color: #333;
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+    .Tips{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) and (max-width: 1024px) {
+    .texte-scroll h1{
+        font-size: 40px;
+        letter-spacing: 2px;
+        color: black;
+    }
+}
+ .box1-right:hover{
+  transform: translateY(-10px);
+ }
+ .box1-right{
+  transition: transform 0.5s;
+ }
+ .image-left:hover{
+  transform: translateY(-10px); 
+ }
+ .image-left{
+  transition: transform 0.5s;
+ }
+ 
+ .skills1:hover{
+    transform: translateY(-10px);
+ }
+ .skills1{
+  transition: 0.5s;
+ }
+
+ .skills2:hover{
+  transform: translateY(-10px);
+}
+.skills2{
+transition: 0.5s;
+}
+
+.why2:hover{
+  transform: translateY(-10px);
+}
+.why2{
+transition: 0.5s;
+}
+
+.why3:hover{
+  transform: translateY(-10px);
+}
+.why3{
+transition: 0.5s;
+}
+
+.moi:hover{
+  transform: translatex(-10px);
+}
+.moi{
+  transition: 0.5s;
+}
+.mainlayaout1:hover{
+  transform: translateY(-10px);
+}
+.mainlayaout1{
+  transition: 0.5s;
+}
+
+.mainlayaout2:hover{
+  transform: translateY(-10px);
+}
+.mainlayaout2{
+  transition: 0.5s;
+}
+.mainlayaout3:hover{
+  transform: translateY(-10px);
+}
+.mainlayaout3{
+  transition: 0.5s;
+}
+.mainlayaout4:hover{
+  transform: translateY(-10px);
+}
+.mainlayaout4{
+  transition: 0.5s;
+}
+.texte-scroll {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background-color: #f4f4f4; /* tu peux changer ça */
+  padding: 10px 0;
+  position: relative;
+}
+
+.texte-scroll h1 {
+  display: inline-block;
+  font-size: 2em;
+  padding-left: 100%;
+  animation: scroll-left 10s linear infinite;
+  color: #e9cc29f8; /* ou n’importe quelle couleur que tu veux */
+}
+
+@keyframes scroll-left {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
