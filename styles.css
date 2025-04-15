@@ -20,8 +20,7 @@ body{
 @media (max-width: 768px) {
     .navbar{
         flex-wrap:nowrap;
-        overflow-x: hidden;
-        overflow-y: 150%;
+        
     }
     
 }
@@ -148,7 +147,9 @@ path {
         border-radius: 10px;
     }
   }
-
+@media (max-width: 768px){
+    .box1-rigwidth: width auto;
+}
   @media (max-width: 768px) {
       .box1-right h1{
         font-size: 0.1em;
