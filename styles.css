@@ -949,11 +949,11 @@ transition: 0.5s;
     margin: 0;
 }
 .social-container a {
-    background-color: #e9cc29f8;
+    background-color: #f8f8f8;
     padding: 1em;
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
     box-sizing: border-box;
     border-radius: 50%;
     flex-shrink: 0;
